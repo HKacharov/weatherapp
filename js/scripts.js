@@ -7,6 +7,7 @@ if (navigator.geolocation){
 }
 
 function lessgo(lat, lon){
+    showLoading();
       fetch("https://fcc-weather-api.glitch.me/api/current?lat=" + lat + "&lon=" + lon)
       .then (response=>response.json())
       .then(data => set(data));
